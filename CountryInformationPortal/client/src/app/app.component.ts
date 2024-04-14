@@ -12,4 +12,9 @@ import { HeaderComponent } from './header/header.component';
 })
 export class AppComponent {
   title = 'CountryInformationPortal';
+  mess = 'hii from Parent';
+  receivedMessage: string = '';
+  receiveMessage(m: string): void {
+    this.receivedMessage = m;
+  }
 }

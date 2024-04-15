@@ -5,5 +5,6 @@ import { AddUserComponent } from './add-user/add-user.component';
 @NgModule({
   declarations: [AddUserComponent],
   imports: [CommonModule],
+  exports: [AddUserComponent],
 })
 export class UsersModule {}

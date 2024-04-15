@@ -18,10 +18,16 @@ export class EditUserComponent {
   captureValue(event: KeyboardEvent) {
     console.log(event.key);
   }
-  onMouseover(event: KeyboardEvent) {
+  onMouseOver(event: KeyboardEvent) {
     console.log(event.key);
   }
-  onMouseout(event: KeyboardEvent) {
+  onMouseOut(event: KeyboardEvent) {
     console.log(event.key);
+  }
+  onFocus(event: KeyboardEvent) {
+    console.log(`onFocus  ${event.key}`);
+  }
+  onBlur(event: KeyboardEvent) {
+    console.log(`onBlur  ${event.key}`);
   }
 }

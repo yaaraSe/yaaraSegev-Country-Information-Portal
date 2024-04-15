@@ -10,3 +10,13 @@
 <!-- <div (mouseover)="onMouseover($event)" (mouseout)="onMouseout($event)">
   this multiple events
 </div> -->
+
+<div
+  tabindex="0"
+  (mouseover)="onMouseOver($event)"
+  (mouseout)="onMouseOut($event)"
+  (focus)="onFocus($event)"
+  (blur)="onBlur($event)"
+>
+  This is multiple events binding
+</div>

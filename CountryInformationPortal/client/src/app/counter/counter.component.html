@@ -1,5 +1,5 @@
 <p>counter works!</p>
-<div id="counter">0</div>
-<button id="increment">increment</button>
-<button id="decrement">decrement</button>
-<button id="reset">reset</button>
+<div id="counter">{{ count$ | async }}</div>
+<button id="increment" (click)="increment()">increment</button>
+<button id="decrement" (click)="decrement()">decrement</button>
+<button id="reset" (click)="reset()">reset</button>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { HeaderComponent } from './header/header.component';
@@ -9,6 +9,7 @@ import { Store } from '@ngrx/store';
 import { selectCounter } from './states/counter/counter.selector';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
+import { CartStore } from './store/cart.store';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +30,8 @@ export class AppComponent {
   mess = 'hii from Parent';
   receivedMessage: string = '';
   count$: Observable<number>;
+  cartStore = inject(CartStore);
+
   constructor(private store: Store<AppState>) {
     this.count$ = this.store.select(selectCounter);
   }

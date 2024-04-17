@@ -7,10 +7,12 @@
     {{ receivedMessage }}
     <app-add-user> </app-add-user> -->
 <h1>App NGRX</h1>
-
+@if (cartStore.products().length===0) {
+<p>products empty</p>
+}
 <app-counter></app-counter>
 <p>
-  {{ count$ | async }}
+  <!-- {{ count$ | async }} ngrx state-->
 </p>
 
 <router-outlet />

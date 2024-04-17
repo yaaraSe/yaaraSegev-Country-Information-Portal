@@ -1,0 +1,23 @@
+<!-- <p>cart works!</p>
+@for(item of cartStore.products(); track $index) {
+{{ item.name }}
+
+<button id="increment" (click)="cartStore.removeItem(item.productId)">
+  removeItem
+</button>
+<button id="decrement" (click)="cartStore.decrement(item.productId)">
+  decrement
+</button>
+<button id="decrement" (click)="cartStore.increment(item.productId)">
+  increment
+</button>
+} -->
+<button
+  id="addToCart"
+  (click)="
+    cartStore.addToCart({ productId: 1, name: 'glass', quantity: 2, price: 40 })
+  "
+>
+  addToCart
+</button>
+<button id="decrement" (click)="cartStore.removeItem(1)">decrement</button>

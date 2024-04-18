@@ -1,10 +1,6 @@
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
-export interface IProduct {
-  productId: number;
-  name: string;
-  price: number;
-  quantity: number;
-}
+import { IProduct } from '../shared/models/products.interface';
+
 export interface CartState {
   products: IProduct[];
 }
